@@ -1,0 +1,37 @@
+{
+	"name": "@atos-design/web",
+	"private": "true",
+	"engines": {
+		"node": ">= 16.0.0",
+		"npm": ">= 8.0.0"
+	},
+	"workspaces": [
+		"packages/*"
+	],
+	"scripts": {
+		"build": "npm run build -ws --if-present",
+		"format": "prettier --write --ignore-unknown .",
+		"lint": "npm run lint:css && npm run lint:style",
+		"lint:css": "stylelint \"packages/**/*.{css, less, sass, scss}\" --aei",
+		"lint:style": "prettier --check --ignore-unknown .",
+		"prepare": "husky install",
+		"release": "npx multi-semantic-release",
+		"test": "npm run test -ws --if-present"
+	},
+	"devDependencies": {
+		"@atos-design/release-config": "1.0.2",
+		"@babel/core": "^7.16.0",
+		"@commitlint/cli": "^15.0.0",
+		"@commitlint/config-conventional": "^15.0.0",
+		"autoprefixer": "^10.4.0",
+		"husky": "^7.0.2",
+		"lint-staged": "^12.0.2",
+		"postcss": "^8.4.1",
+		"postcss-nested": "^5.0.6",
+		"postcss-preset-env": "^7.0.1",
+		"prettier": "^2.4.1",
+		"pretty-quick": "^3.1.0",
+		"stylelint": "^14.1.0",
+		"stylelint-config-prettier": "^9.0.3"
+	}
+}
