@@ -5,7 +5,7 @@
 	"scripts": {
 		"test": "echo no tests available",
 		"storybook": "start-storybook -p 6006",
-		"build-storybook": "build-storybook"
+		"build": "build-storybook"
 	},
 	"dependencies": {
 		"lit": "^2.0.2",

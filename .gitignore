@@ -42,3 +42,4 @@ dist/
 reports/
 .tscache/
 dist-ssr
+storybook-static/
