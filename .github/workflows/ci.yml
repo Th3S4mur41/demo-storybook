@@ -25,6 +25,7 @@ jobs:
         with:
           check-latest: true
           cache: 'npm'
+          version: '16.x'
 
       - name: '⛓️ Install dependencies'
         run: npm ci --no-optional --no-audit --prefer-offline --progress=false
@@ -45,6 +46,7 @@ jobs:
         with:
           check-latest: true
           cache: 'npm'
+          version: '16.x'
 
       - name: '⛓️ Install dependencies'
         run: npm ci --no-optional --no-audit --prefer-offline --progress=false
@@ -65,6 +67,7 @@ jobs:
         with:
           check-latest: true
           cache: 'npm'
+          version: '16.x'
 
       - name: '⛓️ Install dependencies'
         run: npm ci --no-optional --no-audit --prefer-offline --progress=false

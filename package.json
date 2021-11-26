@@ -6,7 +6,7 @@
 		"npm": ">= 8.0.0"
 	},
 	"workspaces": [
-		"packages/*"
+		"packages/storybook"
 	],
 	"scripts": {
 		"build": "npm run build -ws --if-present",
