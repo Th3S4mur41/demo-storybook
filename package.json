@@ -14,7 +14,6 @@
 		"lint": "npm run lint:css && npm run lint:style",
 		"lint:css": "stylelint \"packages/**/*.{css, less, sass, scss}\" --aei",
 		"lint:style": "prettier --check --ignore-unknown .",
-		"prepare": "husky install",
 		"release": "npx multi-semantic-release",
 		"test": "npm run test -ws --if-present"
 	},
