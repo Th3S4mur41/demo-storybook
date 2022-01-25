@@ -23,7 +23,7 @@ on:
 jobs:
   analyze:
     name: Analyze
-    runs-on: [self-hosted, linux]
+    runs-on: ubuntu-latest
     container: node
     permissions:
       actions: read
