@@ -23,7 +23,7 @@
 		"@commitlint/config-conventional": "^15.0.0",
 		"autoprefixer": "^10.4.0",
 		"husky": "^7.0.2",
-		"lint-staged": "^12.0.2",
+		"lint-staged": "^12.3.7",
 		"postcss": "^8.4.1",
 		"postcss-nested": "^5.0.6",
 		"postcss-preset-env": "^7.3.0",
