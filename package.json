@@ -10,10 +10,12 @@
 	],
 	"scripts": {
 		"build": "npm run build -ws --if-present",
-		"format": "prettier --write --ignore-unknown .",
 		"lint": "npm run lint:css && npm run lint:style",
+		"lint:fix": "npm run lint:css:fix && npm run lint:style:fix",
 		"lint:css": "stylelint \"packages/**/*.{css, less, sass, scss}\" --aei",
+		"lint:css:fix": "stylelint \"packages/**/*.{css,less,sass,scss}\" --aei --fix",
 		"lint:style": "prettier --check --ignore-unknown .",
+		"lint:style:fix": "prettier --write --ignore-unknown .",
 		"release": "npx multi-semantic-release",
 		"test": "npm run test -ws --if-present"
 	},
