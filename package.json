@@ -17,13 +17,15 @@
 		"lint:style": "prettier --check --ignore-unknown .",
 		"lint:style:fix": "prettier --write --ignore-unknown .",
 		"release": "npx multi-semantic-release",
-		"test": "npm run test -ws --if-present"
+		"test": "npm run test -ws --if-present",
+		"deploy": "chromatic --exit-zero-on-changes -d packages/storybook/storybook-static"
 	},
 	"devDependencies": {
 		"@babel/core": "^7.16.0",
 		"@commitlint/cli": "^15.0.0",
 		"@commitlint/config-conventional": "^15.0.0",
 		"autoprefixer": "^10.4.0",
+		"chromatic": "^6.11.4",
 		"husky": "^7.0.2",
 		"lint-staged": "^12.0.2",
 		"postcss": "^8.4.1",
