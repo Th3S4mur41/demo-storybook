@@ -18,28 +18,15 @@ jobs:
     if: ${{ github.actor == 'dependabot[bot]' }}
 
     steps:
-      - name: Dependabot metadata
-        id: metadata
-        uses: dependabot/fetch-metadata@v1
+      - uses: actions/checkout@v3
         with:
-          github-token: '${{ secrets.GITHUB_TOKEN }}'
+          ref: ${{ github.event.pull_request.head.sha }}
 
-      - name: Enable auto-merge for Dependabot PRs
-        continue-on-error: true
-        # if: ${{contains(steps.metadata.outputs.dependency-names, '') && steps.metadata.outputs.update-type == 'version-update:semver-patch'}}
-        # Auto merge all dependencies with patch or minor version updates
-        if: ${{(steps.metadata.outputs.update-type == 'version-update:semver-patch') || (steps.metadata.outputs.update-type == 'version-update:semver-minor')}}
-        run: gh pr merge --auto --squash "$PR_URL"
-        env:
-          PR_URL: ${{github.event.pull_request.html_url}}
-          GITHUB_TOKEN: ${{ secrets.GH_TOKEN || secrets.GITHUB_TOKEN }} # GH_TOKEN needed to trigger follow up worlflow: https://github.com/fastify/github-action-merge-dependabot/issues/134
-
-      - name: Approve a PR
-        continue-on-error: true
-        run: gh pr review --approve "$PR_URL"
-        env:
-          PR_URL: ${{github.event.pull_request.html_url}}
-          GITHUB_TOKEN: ${{ secrets.GH_TOKEN || secrets.GITHUB_TOKEN }}
+      - uses: ahmadnassri/action-dependabot-auto-merge@v2
+        with:
+          target: minor
+          github-token: ${{ secrets.GH_TOKEN  }}
+          command: squash and merge
 
   build:
     name: '🛠️ Build'
