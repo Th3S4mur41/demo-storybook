@@ -11,3 +11,10 @@ updates:
       interval: 'weekly'
     reviewers:
       - 'Th3S4mur41'
+    groups: # https://docs.github.com/en/code-security/dependabot/dependabot-version-updates/configuration-options-for-the-dependabot.yml-file#groups
+      storybook:
+        patterns:
+          - 'storybook'
+          - '@storybook/*'
+        exclude-patterns:
+          - '@storybook/addon-designs'
