@@ -9,7 +9,7 @@
 	},
 	"dependencies": {
 		"lit": "^3.0.1",
-		"lit-html": "^2.8.0"
+		"lit-html": "^3.0.1"
 	},
 	"devDependencies": {
 		"@babel/core": "^7.21.4",
