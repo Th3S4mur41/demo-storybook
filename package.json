@@ -23,7 +23,7 @@
 	"devDependencies": {
 		"@babel/core": "^7.23.2",
 		"@commitlint/cli": "^18.2.0",
-		"@commitlint/config-conventional": "^18.1.0",
+		"@commitlint/config-conventional": "^18.4.0",
 		"autoprefixer": "^10.4.14",
 		"chromatic": "^6.11.4",
 		"husky": "^8.0.3",
